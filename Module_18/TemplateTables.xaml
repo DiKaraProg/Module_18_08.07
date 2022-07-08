@@ -1,0 +1,28 @@
+﻿<Window x:Class="Module_18.TemplateTables"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Module_18"
+        mc:Ignorable="d"
+        Title="TemplateTables" Height="450" Width="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <DataGrid AutoGenerateColumns="False" 
+                  ItemsSource ="{Binding}" x:Name="DataGrid" Foreground="Blue">
+            <DataGrid.Background>
+                <ImageBrush ImageSource="image/photo1.png"/>
+
+            </DataGrid.Background>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="id" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}" />
+                <DataGridTextColumn Header="FirstName" Binding="{Binding FirstName}" />
+                <DataGridTextColumn Header="ProductId" Binding="{Binding ProductId}"/>
+                <DataGridTextColumn Header="ProductName" Binding="{Binding ProductName}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
